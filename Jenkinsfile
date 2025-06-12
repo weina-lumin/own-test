@@ -14,9 +14,7 @@ pipeline {
         }
         stage('sanity') {
             steps {
-                input {
-                    message 'Do you want to continue?'
-                }
+                input "Do you want to continue?"
             }
         }
         stage('deploy') {
