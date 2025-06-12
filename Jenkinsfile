@@ -12,6 +12,13 @@ pipeline {
                 echo 'Testing...'
             }
         }
+        stage('sanity') {
+            steps {
+                input {
+                    message 'Do you want to continue?'
+                }
+            }
+        }
         stage('deploy') {
             steps {
                 echo 'Deploying...'
