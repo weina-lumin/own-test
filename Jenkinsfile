@@ -7,6 +7,16 @@ pipeline {
                 sh 'pip --version'
             }
         }
+        stage('test') {
+            steps {
+                echo 'Testing...'
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
     }
     post {
         always {
